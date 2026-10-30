@@ -29,10 +29,10 @@ export function Hero() {
     <section id="top" className="relative isolate flex min-h-[calc(100svh-6.75rem)] overflow-hidden bg-river text-driftwood">
       <Photo
         src={PHOTOS.hero}
-        alt="Still alpine water and ridgelines in the kind of light Columbia River mornings hold"
+        alt="A wide river between evergreen banks, the lowland water where the Lewis meets the Columbia"
         priority
         sizes="100vw"
-        className="scale-105"
+        className="scale-105 object-[center_42%]"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-river/95 via-river/55 to-river/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-river/80 via-transparent to-river/30" />

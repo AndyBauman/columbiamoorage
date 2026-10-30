@@ -94,6 +94,22 @@ export function Stays() {
                   </p>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{stay.summary}</p>
+                {stay.gallery && stay.gallery.length > 1 ? (
+                  <div className="mt-4 grid grid-cols-3 gap-2">
+                    {stay.gallery.map((src, photoIndex) => (
+                      <div
+                        key={src}
+                        className="relative h-20 overflow-hidden rounded-xl sm:h-24"
+                      >
+                        <Photo
+                          src={src}
+                          alt={`${stay.name}, view ${photoIndex + 1}`}
+                          sizes="160px"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {stay.tags.map((tag) => (
                     <li

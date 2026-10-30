@@ -9,22 +9,24 @@ export const SITE = {
 } as const;
 
 export const PHOTOS = {
-  hero: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2400&q=80",
-  pines: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=80",
-  fog: "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=1800&q=80",
-  lake: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1800&q=80",
-  rv: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=1800&q=80",
-  cabin: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1800&q=80",
+  hero: "https://images.unsplash.com/photo-1616997865668-97bb97499459?auto=format&fit=crop&w=2400&q=80",
+  pines: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=80",
+  fog: "https://images.unsplash.com/photo-1616997865668-97bb97499459?auto=format&fit=crop&w=1800&q=80",
+  lake: "https://images.unsplash.com/photo-1576603233224-b750b02d7dfb?auto=format&fit=crop&w=1800&q=80",
+  rv: "https://images.unsplash.com/photo-1780886661843-abc65352bd01?auto=format&fit=crop&w=1800&q=80",
+  cabin: "https://images.unsplash.com/photo-1537197518227-a36efeafd477?auto=format&fit=crop&w=1800&q=80",
+  cabinFirs:
+    "https://images.unsplash.com/photo-1575403071235-5dcd06cbf169?auto=format&fit=crop&w=1800&q=80",
   cabinInterior:
-    "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1648326342761-8a9abfb7a2c0?auto=format&fit=crop&w=1600&q=80",
   tent: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1800&q=80",
   camp: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1600&q=80",
-  boat: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1800&q=80",
-  kayak: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1800&q=80",
+  boat: "https://images.unsplash.com/photo-1616997865668-97bb97499459?auto=format&fit=crop&w=1800&q=80",
+  kayak: "https://images.unsplash.com/photo-1665070906444-1fe072caa44a?auto=format&fit=crop&w=1800&q=80",
   forest: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80",
   wellness:
-    "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80",
-  ridge: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1800&q=80",
+    "https://images.unsplash.com/photo-1660735698223-23a4edefa264?auto=format&fit=crop&w=1600&q=80",
+  ridge: "https://images.unsplash.com/photo-1576603233224-b750b02d7dfb?auto=format&fit=crop&w=1800&q=80",
 } as const;
 
 export type Rates = {
@@ -42,6 +44,7 @@ export type Accommodation = {
   weekly: number;
   monthly: number;
   image: string;
+  gallery?: string[];
   specs: string[];
   tags: string[];
 };
@@ -72,11 +75,12 @@ export const ACCOMMODATIONS: Accommodation[] = [
     name: "Waterfront Glamping Cabins",
     eyebrow: "Turnkey, no tow",
     summary:
-      "Cedar cabins for anglers and weekend explorers who want a real bed, a dry place for gear, and the river outside the door.",
+      "Modern wood cabins and compact park models with a porch, a real bed, and a dry place for rods, set in the trees on the low bank where the Lewis meets the Columbia.",
     nightly: 175,
     weekly: 1050,
     monthly: 3650,
     image: PHOTOS.cabin,
+    gallery: [PHOTOS.cabin, PHOTOS.cabinFirs, PHOTOS.cabinInterior],
     specs: [
       "Queen bed and heated cabin",
       "Gear loft and rod storage",
